@@ -3,7 +3,6 @@ import java.util.Scanner;
 class BankingApp {
     public static void main(String arg[]) {
         Scanner sc = new Scanner(System.in);
-        //create initial accounts
         System.out.print("How many number of customers do you want to input? ");
         int n = sc.nextInt();
         BankDetails C[] = new BankDetails[n];
@@ -11,7 +10,7 @@ class BankingApp {
             C[i] = new BankDetails();
             C[i].openAccount();
         }
-        // loop runs until number 5 is not pressed to exit
+
         int ch;
         do {
             System.out.println("\n ***Banking System Application***");
