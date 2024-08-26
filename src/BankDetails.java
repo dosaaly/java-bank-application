@@ -5,7 +5,6 @@ class BankDetails {
     private String acc_type;
     private long balance;
     Scanner sc = new Scanner(System.in);
-    //method to open new account
     public void openAccount() {
         System.out.print("Enter Account No: ");
         accno = sc.next();
@@ -16,21 +15,18 @@ class BankDetails {
         System.out.print("Enter Balance: ");
         balance = sc.nextLong();
     }
-    //method to display account details
     public void showAccount() {
         System.out.println("Name of account holder: " + name);
         System.out.println("Account no.: " + accno);
         System.out.println("Account type: " + acc_type);
         System.out.println("Balance: " + balance);
     }
-    //method to deposit money
     public void deposit() {
         long amt;
         System.out.println("Enter the amount you want to deposit: ");
         amt = sc.nextLong();
         balance = balance + amt;
     }
-    //method to withdraw money
     public void withdrawal() {
         long amt;
         System.out.println("Enter the amount you want to withdraw: ");
@@ -42,7 +38,6 @@ class BankDetails {
             System.out.println("Your balance is less than " + amt + "\tTransaction failed...!!" );
         }
     }
-    //method to search an account number
     public boolean search(String ac_no) {
         if (accno.equals(ac_no)) {
             showAccount();
